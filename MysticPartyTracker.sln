@@ -1,0 +1,27 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.8.34330.188
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MysticPartyTracker", "MysticPartyTracker\MysticPartyTracker.csproj", "{9ADDB711-A109-484E-8B17-DD472779A73F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9ADDB711-A109-484E-8B17-DD472779A73F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9ADDB711-A109-484E-8B17-DD472779A73F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9ADDB711-A109-484E-8B17-DD472779A73F}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{9ADDB711-A109-484E-8B17-DD472779A73F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9ADDB711-A109-484E-8B17-DD472779A73F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9ADDB711-A109-484E-8B17-DD472779A73F}.Release|Any CPU.Deploy.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {8E1050C7-3E78-4B8F-AE7C-367228D44BA3}
+	EndGlobalSection
+EndGlobal

@@ -3,17 +3,18 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="MysticPartyTracker.View.DiceView"
              Title="DiceView">
-    <VerticalStackLayout>
+    <VerticalStackLayout VerticalOptions="Center" HorizontalOptions="Center">
         <Label 
             Text="ROLAR DADOS"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
+            FontSize="Header"/>
         
         <Label 
             Text="0"
             x:Name="ResultLabel"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
+            FontSize="Title"/>
+
+        <Label 
+            Text="Quantidade de Dados"/>
 
         <Picker x:Name="QuantityPicker"
         Title="Quantos dados deseja rolar?">
@@ -27,6 +28,9 @@
             </Picker.ItemsSource>
         </Picker>
 
+        <Label 
+            Text="Quantidade de Lados"/>
+        
         <Picker x:Name="SidesPicker"
         Title="Quantos lados tem seus dados?">
             <Picker.ItemsSource>

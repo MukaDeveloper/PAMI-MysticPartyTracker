@@ -15,6 +15,14 @@ public partial class DiceView : ContentPage
     {
 		int quantity = (int) QuantityPicker.SelectedItem;
 		int sides = (int) SidesPicker.SelectedItem;
-		ResultLabel.Text = new Dice(sides).Roll().ToString();
+		string result = "Resultado = ";
+		List<int> results = new Dice(sides, quantity).RollDices();
+		int soma = 0;
+        foreach (var item in results)
+        {
+			soma += item;
+			result += $"{item} ";
+        }
+        ResultLabel.Text = $"{result}\nSoma = {soma}";
     }
 }

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MysticPartyTracker.View.DiceView"
+             Title="DiceView">
+    <VerticalStackLayout>
+        <Label 
+            Text="ROLAR DADOS"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" />
+        
+        <Label 
+            Text="0"
+            x:Name="ResultLabel"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" />
+
+        <Picker x:Name="QuantityPicker"
+        Title="Quantos dados deseja rolar?">
+            <Picker.ItemsSource>
+                <x:Array Type="{x:Type x:Int32}">
+                    <x:Int32>1</x:Int32>
+                    <x:Int32>2</x:Int32>
+                    <x:Int32>3</x:Int32>
+                    <x:Int32>4</x:Int32>
+                </x:Array>
+            </Picker.ItemsSource>
+        </Picker>
+
+        <Picker x:Name="SidesPicker"
+        Title="Quantos lados tem seus dados?">
+            <Picker.ItemsSource>
+                <x:Array Type="{x:Type x:Int32}">
+                    <x:Int32>4</x:Int32>
+                    <x:Int32>6</x:Int32>
+                    <x:Int32>8</x:Int32>
+                    <x:Int32>10</x:Int32>
+                </x:Array>
+            </Picker.ItemsSource>
+        </Picker>
+
+        <Button
+            Text="Rolar"
+            x:Name="RollButtons"
+            Clicked="RollButtons_Clicked"
+            />
+    </VerticalStackLayout>
+</ContentPage>

@@ -1,15 +1,18 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="MysticPartyTracker.View.DiceView"
-             Title="DiceView">
-    <VerticalStackLayout VerticalOptions="Center" HorizontalOptions="Center">
+             x:Class="MysticPartyTracker.Views.DiceView"
+             Title="Rolar Dados">
+    <VerticalStackLayout 
+        VerticalOptions="Center" 
+        HorizontalOptions="Center"
+        Spacing="20">
         <Label 
             Text="ROLAR DADOS"
             FontSize="Header"/>
-
         <Picker x:Name="QuantityPicker"
-        Title="Quantos dados deseja rolar?">
+        Title="Quantos dados deseja rolar?"
+        SelectedItem="{Binding Quantity}">
             <Picker.ItemsSource>
                 <x:Array Type="{x:Type x:Int32}">
                     <x:Int32>1</x:Int32>
@@ -23,9 +26,9 @@
                 </x:Array>
             </Picker.ItemsSource>
         </Picker>
-
         <Picker x:Name="SidesPicker"
-        Title="Quantos lados tem seus dados?">
+        Title="Quantos lados tem seus dados?"
+        SelectedItem="{Binding NumberSides}">
             <Picker.ItemsSource>
                 <x:Array Type="{x:Type x:Int32}">
                     <x:Int32>4</x:Int32>
@@ -35,20 +38,25 @@
                 </x:Array>
             </Picker.ItemsSource>
         </Picker>
-
         <Button
             Text="Rolar"
             x:Name="RollButtons"
-            Clicked="RollButtons_Clicked"
-            />
-
-
+            Command="{Binding RollCommand}"/>
         <Label 
-            Text="Gire os dados"
+            Text="{Binding Total}"
             x:Name="ResultLabel"
             FontSize="Title"
             VerticalOptions="Center" HorizontalOptions="Center"/>
-        
-        
+        <CollectionView ItemsSource="{Binding Rolls}"
+            VerticalOptions="Center" HorizontalOptions="Center">
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <HorizontalStackLayout>
+                        <Label 
+                            Text="{Binding}"/>
+                    </HorizontalStackLayout>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
     </VerticalStackLayout>
 </ContentPage>

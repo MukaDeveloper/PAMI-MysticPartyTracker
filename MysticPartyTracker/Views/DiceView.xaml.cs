@@ -1,6 +1,6 @@
-using MysticPartyTracker.Models;
+using MysticPartyTracker.ViewModels;
 
-namespace MysticPartyTracker.View;
+namespace MysticPartyTracker.Views;
 
 public partial class DiceView : ContentPage
 {
@@ -9,10 +9,12 @@ public partial class DiceView : ContentPage
 		InitializeComponent();
 		QuantityPicker.SelectedIndex = 0;
 		SidesPicker.SelectedIndex = 0;
+		BindingContext = new DiceViewModel();
 	}
 
     private void RollButtons_Clicked(object sender, EventArgs e)
     {
+		/*
 		int quantity = (int) QuantityPicker.SelectedItem;
 		int sides = (int) SidesPicker.SelectedItem;
 		string result = $"Resultados:\n";
@@ -24,5 +26,6 @@ public partial class DiceView : ContentPage
 			result += $"{item}\n";
         }
         ResultLabel.Text = $"{result}\nSoma = {soma}";
-    }
+		*/
+    } 
 }

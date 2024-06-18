@@ -5,7 +5,7 @@
              Title="Ficha de Personagens">
     <VerticalStackLayout Spacing="10" Margin="30">
         <FlexLayout JustifyContent="SpaceBetween">
-            <VerticalStackLayout FlexLayout.Grow="1" Padding="0 20 0 0">
+            <VerticalStackLayout FlexLayout.Grow="1">
                 <Label 
                     Text="Nome do Personagem"
                     />

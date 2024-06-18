@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MysticPartyTracker.Views.SpellView"
+             Title="SpellView">
+    <ScrollView>
+        <VerticalStackLayout
+            VerticalOptions="Center" 
+            HorizontalOptions="Center">
+            <CollectionView ItemsSource="{Binding Spells}" EmptyView="Sem informações.">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <VerticalStackLayout Spacing="10">
+                            <HorizontalStackLayout>
+                                <Label
+                                    Text="Índice: "
+                                    FontSize="Micro"
+                                    VerticalOptions="Center"/>
+                                <Label
+                                    Text="{Binding Index}"
+                                    FontSize="Micro"
+                                    VerticalOptions="Center"/>
+                            </HorizontalStackLayout>
+                            <HorizontalStackLayout>
+                                <Label
+                                    Text="Name: "
+                                    VerticalOptions="Center"/>
+                                <Label
+                                    Text="{Binding Name}"
+                                    VerticalOptions="Center"/>
+                            </HorizontalStackLayout>
+                            <HorizontalStackLayout>
+                                <Label
+                                    Text="Level: "
+                                    VerticalOptions="Center"/>
+                                <Label
+                                    Text="{Binding Level}"
+                                    VerticalOptions="Center"/>
+                            </HorizontalStackLayout>
+                            <HorizontalStackLayout>
+                                <Label
+                                    Text="Url: "
+                                    VerticalOptions="Center"/>
+                                <Label
+                                    Text="{Binding Url}"
+                                    VerticalOptions="Center"/>
+                            </HorizontalStackLayout>
+                            <Label 
+                                Text="-------------------------------------------------"
+                                VerticalOptions="Center"/>
+                        </VerticalStackLayout>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+            <Button 
+                Text="Buscar spells"
+                Margin="20"
+                VerticalOptions="Center"
+                HorizontalOptions="Center"
+                Command="{Binding ListarSpellAsyncCommand}"/>
+        </VerticalStackLayout>
+
+    </ScrollView>
+</ContentPage>
